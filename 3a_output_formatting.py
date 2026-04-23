@@ -44,5 +44,3 @@ def emotion_detector(text_to_analyse):
         return_emotion_scores = {**emotion_scores, 'dominant_emotion': dominant_emotion}
 
     return return_emotion_scores 
-
-  
