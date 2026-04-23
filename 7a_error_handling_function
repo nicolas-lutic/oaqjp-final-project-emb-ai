@@ -42,4 +42,12 @@ def emotion_detector(text_to_analyse):
         }
         dominant_emotion = max(emotion_scores, key=emotion_scores.get)
         return_emotion_scores = {**emotion_scores, 'dominant_emotion': dominant_emotion}
+    # If the response status code is 400, all param to None 
+    elif response.status_code == 400:
+        return return_emotion_scores
+    # For any other unexpected status codes, all param to None 
+    else:
+        return return_emotion_scores
     return return_emotion_scores 
+
+  
